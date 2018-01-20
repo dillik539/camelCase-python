@@ -2,8 +2,8 @@
 def main():
     #call the display function
     display_banner()
-    #take a sentence from the user
-    sentence = input("Enter the sentence: ")
+    #call the function and assigns it to a sentence variable.
+    sentence = instructions()
     #split the sentence into a list. it removes all the spaces, keeps
     #only the words and put them in a list.
     sentenceList = sentence.split()
@@ -25,5 +25,11 @@ def display_banner():
     msg = 'AWESOME CamelCaseGenerator PROGRAM'
     stars = '*' * len(msg)
     print('\n', stars, '\n', msg, '\n', stars, '\n')
+#this function instructs the user to enter the sentence of user's choice
+#and return that sentence.
+def instructions():
+    print("Enter a sentence to convert to camelcase.")
+    inputSentence = input("Enter your sentence: ")
+    return inputSentence
 
 main()
